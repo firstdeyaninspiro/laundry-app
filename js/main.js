@@ -72,5 +72,5 @@ function submitBooking() {
 
     bookings.push(newBooking);
     localStorage.setItem('bookings', JSON.stringify(bookings));
-    alert('Booking berhasil disubmit! Kami akan segera mengirim pesan konfirmasi ke WhatsApp anda');
+    alert('Pesanan berhasil disubmit! Kami akan segera mengirim pesan konfirmasi ke WhatsApp anda');
 }
