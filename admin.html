@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Toko Laundry</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Admin Panel - Toko Laundry</h1>
+
+        <div id="booking-list-page">
+            <h2 class="mt-4">Daftar Pesanan Masuk</h2>
+            
+            <!-- Filter Inputs -->
+            <div class="form-group row">
+                <label for="filterName" class="col-sm-2 col-form-label">Nama:</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="filterName" oninput="filterBookings()">
+                </div>
+                <label for="filterKodeBooking" class="col-sm-2 col-form-label">Kode Pesanan:</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="filterKodeBooking" oninput="filterBookings()">
+                </div>
+                <label for="filterStatus" class="col-sm-2 col-form-label">Status:</label>
+                <div class="col-sm-4">
+                    <select class="form-control" id="filterStatus" onchange="filterBookings()">
+                        <option value="">Semua</option>
+                        <option value="Disetujui">Disetujui</option>
+                        <option value="Sedang Diproses">Sedang Diproses</option>
+                        <option value="Selesai">Selesai</option>
+                        <option value="Belum Disetujui">Belum Disetujui</option>
+                        <option value="Dibatalkan">Dibatalkan</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 text-right">
+                    <button class="btn btn-secondary" onclick="resetFilter()">Reset Filter</button>
+                </div>
+            </div>
+
+            <div id="bookings" class="booking-list mt-4"></div>
+        </div>
+
+        <div id="booking-detail-page" style="display: none;">
+            <h2 class="mt-4">Detail Pesanan</h2>
+            <button class="btn btn-secondary mb-3" onclick="showBookingList()">Kembali</button>
+            <div id="booking-detail" class="booking-detail"></div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

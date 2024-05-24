@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Toko Laundry</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Website Toko Laundry</h1>
+
+        <h2 class="mt-4">Daftar Paket Laundry</h2>
+        <div id="packages" class="row"></div>
+
+        <h2 class="mt-4">Formulir Pesanan</h2>
+        <div class="booking-form p-4 rounded shadow-sm bg-light">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="phone">No. Telepon:</label>
+                <input type="text" class="form-control" id="phone">
+            </div>
+            <div class="form-group">
+                <label for="package">Paket:</label>
+                <select class="form-control" id="package"></select>
+            </div>
+            <div class="form-group">
+                <label for="date">Jadwal:</label>
+                <input type="datetime-local" class="form-control" id="date">
+            </div>
+            <button class="btn btn-success btn-block" onclick="submitBooking()">Submit Booking</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
