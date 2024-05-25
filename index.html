@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="bg-image">
     <div class="container mt-5">
-        <h1 class="text-center">Website Toko Laundry</h1>
+        <h1 class="text-center">Toko Laundry</h1>
 
-        <h2 class="mt-4">Daftar Paket Laundry</h2>
+        <h3 class="mt-4">Daftar Paket Laundry</h2>
         <div id="packages" class="row"></div>
 
         <h2 class="mt-4">Formulir Pesanan</h2>
-        <div class="booking-form p-4 rounded shadow-sm bg-light">
+        <div id="booking-form" class="booking-form p-4 rounded shadow-sm bg-light">
             <div class="form-group">
                 <label for="name">Nama:</label>
                 <input type="text" class="form-control" id="name">
@@ -29,13 +29,36 @@
                 <select class="form-control" id="package"></select>
             </div>
             <div class="form-group">
-                <label for="date">Jadwal:</label>
+                <label for="date">Jadwal Penyerahan Cucian:</label>
                 <input type="datetime-local" class="form-control" id="date">
             </div>
             <button class="btn btn-success btn-block" onclick="submitBooking()">Submit Pesanan</button>
         </div>
     </div>
 
+    <footer class="footer mt-3" align="center" style=" background-color: rgba(58, 58, 58, 0.5); color: #fff; padding-top: 20px;  ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Jl. Contoh No. 123, Kota Anda</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Email: info@tokolaundry.com </p>
+                </div>
+                <div class="col-md-4">
+                    <p>Telepon: 085236239723</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <p>Copyright© 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
     <script src="js/main.js"></script>
 </body>
 </html>

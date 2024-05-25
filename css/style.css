@@ -2,6 +2,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
     background-color: rgb(79, 107, 161);
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: 5px; 
 }
 
 .container {
@@ -18,11 +22,18 @@ body {
     border: 1px solid #363535;
     border-radius: 5px;
     background: #e3f2fd; /* Biru muda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: box-shadow 0.3s ease; /* Transisi efek bayangan */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Efek bayangan saat hover */
 }
 
 h1, h2 {
     text-align: center;
-    color: #0275d8;
+    color: white; /* Ubah warna teks judul menjadi putih */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .package-list, .booking-list {
